@@ -3,7 +3,7 @@ require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const router = require('./Routes/route')
-require('./connect/connection')
+require('./Connect/connection')
 
 const server = express()
 

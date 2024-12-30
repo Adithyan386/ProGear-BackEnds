@@ -1,3 +1,4 @@
+// const { verify } = require('jsonwebtoken')
 const mongoose = require('mongoose')
 
 const userschema = new mongoose.Schema({
@@ -14,7 +15,6 @@ const userschema = new mongoose.Schema({
         type:String
     },
     password:{
-        required:true,
         type:String
     },
     address:String,
@@ -28,6 +28,20 @@ const userschema = new mongoose.Schema({
     role:{
         type:Number,
         default:0
+    },
+
+    otp:{
+        type:String
+    },
+
+    otpexpries:{
+        type:Date
+    },
+
+    idVerified:{
+        required:true,
+        type:Boolean,
+        default:false
     }
 })
 

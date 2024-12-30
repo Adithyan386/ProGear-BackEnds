@@ -24,7 +24,18 @@ const productschema = new mongoose.Schema({
     image:{
         required:true,
         type:String
-    }
+    },
+
+    reviews:[
+        {
+            review:{
+                type:String
+            },
+            username:{
+                type:String
+            }
+        }
+    ]
 })
 
 const productModel = mongoose.model('productModel',productschema)

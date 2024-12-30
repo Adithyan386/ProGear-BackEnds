@@ -1,8 +1,9 @@
 const userModel = require("../Models/usermodel")
 
 const adminware = async(req,res,next)=>{
-    const id  = req.playload
+    const id  = req.payload
     const user = await userModel.findById(id)
+    
     if(user.role === 1){
         return next()
     }

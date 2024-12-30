@@ -9,7 +9,7 @@ const jwtmiddleware = (req,res,next)=>{
         const jwtreponse = jwt.verify(token,'supersimplekey')
         // console.log(jwtreponse);
         
-            req.playload = jwtreponse.id
+            req.payload = jwtreponse.id
             next()
         
         
